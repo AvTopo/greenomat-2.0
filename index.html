@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-firestore.js"></script>
+    <script src="assets/firestore.js"></script>
+    <title>Greenomat</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="loading">
+            <div class="darken"></div>
+            <div id="loader"></div>
+        </div>
+
+        <div class="header">
+            <div class="logo">
+                <a href="#"><img src="assets/img/sonnenblume_auf_transparent_hellesgelb-01.png" alt=""></a>
+            </div>
+            <h1>Greenomat</h1>
+        </div>
+
+        <div class="picture"></div>
+        <div class="questions">
+            <div class="question">
+                <div class="heading">
+                    <h3 id="questionHeader">Hier steht der Titel</h3>
+                </div>
+                <div class="thesis">
+                    <p id="questionText">Hier steht die Frage</p>
+
+                    <div id="resultSection" class="resultSection">
+                        <h3 class="resultHeader">Insgesamt überschneidet sich Ihre Meinung mit unserem Wahlprogramm um etwa <span id="percentValue"></span> Prozent.</h3>
+                        <div class="resultContainer">
+                            <div id="resultBar" class="level green">50%</div>
+                        </div>
+                        <h3 class="resultHeader">In welchen Details wir einer Meinung mit Ihnen sind, oder wo wir uns eventuell unterscheiden, haben wir für Sie hier aufgeschlüsselt:</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sliderSection" class="sliderSection">
+                <input type="range" min="0" max="100" value="50" step="10" class="slider" id="myRange">
+                <div class="values">
+                    <div class="value">Niemals</div>
+                    <div class="value">Akzeptabel</div>
+                    <div class="value">Absolut</div>
+                </div>
+                <div class="controls">
+                    <input type="button" class="sendButton" id="sendButton" value="Absenden">
+                </div>
+            </div>
+
+            <div class="infos">
+                <div class="amount">Frage <span id="questionStatus">0</span> von <span id="questionCount">0</span></div>
+                <div class="points">Sonnenblumen: <span id="valueText">0</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/variables.js"></script>
+    <script src="assets/loader.js"></script>
+    <script src="assets/functions.js"></script>
+    <script src="assets/main.js"></script>
+
+</body>
+
+</html>

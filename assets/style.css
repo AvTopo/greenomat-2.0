@@ -1,0 +1,376 @@
+/* Fonts */
+
+@font-face {
+    font-family: ArvoRegular;
+    src: url(fonts/arvo_regular.woff);
+}
+
+@font-face {
+    font-family: ArvoBold;
+    src: url(fonts/Arvo_Gruen_2015_10.woff);
+}
+
+@font-face {
+    font-family: ptSansRegular;
+    src: url(fonts/ptsans_regular.woff);
+}
+
+@font-face {
+    font-family: ptSansBold;
+    src: url(fonts/ptsans_bold.woff);
+}
+
+
+/* Main */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background: url(img/green_mob.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        background: url(img/green_md.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .wrapper {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+}
+
+
+/* Content */
+
+.header {
+    height: 6em;
+    display: flex;
+    flex-direction: row;
+    margin: 2em auto;
+}
+
+.logo {
+    width: 5em;
+    height: 5em;
+    margin: .5em;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.picture {
+    margin: 0 auto;
+    opacity: 0.5;
+    width: 80%;
+    height: 5em;
+    background: url(img/header.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.header h1 {
+    align-self: center;
+    margin: .5em;
+    color: #fffffe;
+    font-family: ArvoBold;
+}
+
+.questions {
+    position: relative;
+    margin: 0 auto 2em;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    border-radius: 0.25em;
+    padding: .5em;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.heading h3 {
+    font-family: ptSansBold;
+    text-decoration: underline;
+    font-size: 1.3em;
+    color: #fffffe;
+}
+
+.thesis {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    border-radius: 0.25em;
+    padding: 1em;
+    background: #fff55f;
+}
+
+.thesis p {
+    font-family: ptSansRegular;
+    font-size: 1em;
+    color: #151515;
+}
+
+.question {
+    width: 100%;
+}
+
+
+/* Slider */
+
+.slider {
+    -webkit-appearance: none;
+    margin: .5em auto;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #41984c;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #27572d;
+    cursor: pointer;
+}
+
+.values {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.value {
+    font-family: ptSansRegular;
+    font-size: 1em;
+    color: #fffffe;
+    border-left: 1px solid #fffffe;
+    border-right: 1px solid #fffffe;
+    text-align: center;
+    width: 33.33333%;
+    margin: 0 auto;
+}
+
+
+/* Result */
+
+.resultSection {
+    display: none;
+    padding: 2em;
+}
+
+.resultHeader {
+    font-family: ptSansRegular;
+    font-size: 1em;
+    color: #151515;
+}
+
+.resultContainer {
+    margin: 2em 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    background-color: #ddd;
+}
+
+.level {
+    text-align: right;
+    padding-right: .5em;
+    /* Right-align text */
+    padding-top: .5em;
+    /* Add top padding */
+    padding-bottom: .5em;
+    /* Add bottom padding */
+    color: #fffffe;
+    /* White text color */
+}
+
+.green {
+    width: 50%;
+    background-color: #46962b;
+}
+
+
+/* Evaluate */
+
+.lowCell {
+    margin-bottom: .2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #bd4444;
+}
+
+.midCell {
+    margin-bottom: .2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #3a80b5;
+}
+
+.highCell {
+    margin-bottom: .2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #46962b;
+}
+
+.nameSpan {
+    font-family: ptSansRegular;
+    color: #fffffe;
+    padding: .1em;
+}
+
+@media screen and (min-width: 1200px) {
+    .lowCell {
+        margin-bottom: .2em;
+        display: flex;
+        flex-direction: row;
+        background: #bd4444
+    }
+    .midCell {
+        margin-bottom: .2em;
+        display: flex;
+        flex-direction: row;
+        background: #3a80b5
+    }
+    .highCell {
+        margin-bottom: .2em;
+        display: flex;
+        flex-direction: row;
+        background: #46962b
+    }
+    .nameSpan {
+        font-family: ptSansRegular;
+        color: #fffffe;
+        padding: .5em;
+    }
+}
+
+.percentValue {
+    font-family: ptSansRegular;
+    color: #151515;
+    padding: .2em;
+}
+
+
+/* Info */
+
+.infos {
+    position: relative;
+    width: 100%;
+    margin: 2em 0;
+}
+
+.amount {
+    float: left;
+    color: #fffffe;
+    width: 50%;
+    text-align: left;
+}
+
+.points {
+    float: right;
+    color: #fffffe;
+    width: 50%;
+    text-align: right;
+}
+
+.controls {
+    width: 100%;
+}
+
+.sendButton {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    float: right;
+    width: 30%;
+    height: 4em;
+    margin: 1em 0 0 0;
+}
+
+.sendButton:active {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+}
+
+
+/* Loader */
+
+#loading {
+    display: block;
+}
+
+.darken {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #46962b;
+    border-radius: 50%;
+    border-top: 16px solid #fff55f;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
